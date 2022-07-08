@@ -1,0 +1,27 @@
+@import './animations';
+@import './variables';
+
+@mixin texthover {
+    &:hover {
+        text-shadow:  0 0 1rem red;
+        color: rgb(255, 0, 0);
+        transition: all $trans ease-in-out;
+        // @include navtextanimation();
+    }
+}
+
+@mixin navtextanimation() {
+    animation-name: navtextani;
+    animation-iteration-count: infinite;
+    animation-duration: 0.3s;
+}
+
+@mixin boxhover {
+    &:hover{
+        // border-radius: 0.7rem;
+        // box-shadow: inset 0rem 0rem $inboxshadow red, 0rem 0rem $boxshadow red;
+        // transition: all $trans ease-in-out;
+        border-bottom: 0.1rem solid red;
+        transform: scale(1.2);
+    }
+}

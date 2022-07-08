@@ -1,0 +1,30 @@
+.footer-container {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(121, 115, 115);
+    color: white;
+    
+    .footer-wrapper {
+
+        height: 100%;
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .project {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.footer-bot {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 100%;
+}

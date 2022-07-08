@@ -1,0 +1,250 @@
+@import '../fonts';
+@import '../mixing';
+@import '../variables';
+
+.top {
+    background-color: rgb(37, 37, 37);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+
+    @media screen and (max-width : 768px) {
+        display: none;
+        
+    }
+
+    .top-container {
+        height: 30px;
+        position: sticky;
+        width: 100%;
+        background-color: rgb(37, 37, 37);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        .contact-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 0.6rem;
+            gap: 10px;
+            color: rgb(209, 208, 208);
+    
+            .mail-box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+    
+                .mail {
+                    color: rgb(255, 255, 255);
+                }
+                .mail-text {
+                    font-family: $topFont;
+                }
+            }
+            .phone-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2px;
+
+                .phonenumber {
+                    font-family: $topFont;
+                }
+            }
+        }
+        .search-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(209, 208, 208);
+            gap: 10px;
+            margin-right: 0.4rem;
+
+            .search-text {
+                font-family: $topFont;
+            }
+    
+            .s-box{
+                position: relative;
+    
+                .icon {
+                    position: absolute;
+                    right: 0;
+                    color: black;
+                    cursor: pointer;
+                }
+                .search{
+                    border: none;
+                    outline: none;
+                    padding: 0.3rem;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    
+}
+
+.navbar-container {
+    position: sticky;
+    height: 80px;
+    // background-image: linear-gradient(to right,black, rgb(88, 86, 86), black, black,rgb(85, 84, 84), black);
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 10;
+
+    .open-menu {
+        display: none;
+
+        @media  screen and (max-width : 768px ) {
+            display: block;
+             position: absolute;
+             top : 0;
+             right : 0;
+             transform: translate(-100%, 60%);
+             font-size: 1.8rem;
+             cursor: pointer;
+             color: white;
+             transition: all 0.2s ease-in-out;
+
+             &:hover {
+                 transition: all 0.2s ease-in-out;
+             }
+        } 
+    }
+
+    .navbar-wrapper {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 1;
+        padding: 0 24px;
+
+      .title-link {
+          text-decoration: none;
+          box-shadow: 5px 5px 5px red;
+          border-radius: 50%;
+          margin-left: 20px; 
+
+        .title {
+            font-family: 'Pacifico', cursive;
+            color: white;
+            text-shadow: 0 0 0.3rem rgb(250, 33, 33);
+            font-size: 1.7rem; 
+            user-select: none;
+        }
+      }
+       .menu-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap : 0.5rem;
+        
+        @media screen and (max-width : 768px) {
+            display: none;
+        }
+        .menu-item{
+            text-decoration: none;
+            color: white;
+
+            .home { 
+                font-size: $text;
+                padding: $textpad;
+                transition: all 0.4s ease-in-out;
+                @include texthover();
+                font-family: $OleoFont ;
+                user-select: none;
+            }
+            .cryptocurrency {
+                font-size: $text;
+                padding: $textpad;
+                @include texthover();
+                font-family: $OleoFont ;
+                user-select: none;
+            }
+            .exchanges {
+                font-size: $text;
+                padding: $textpad;
+                @include texthover();
+                font-family: $OleoFont ;
+                user-select: none;
+            }
+            .news {
+                font-size: $text;
+                padding: $textpad;
+                @include texthover();
+                font-family: $OleoFont ;
+                user-select: none;
+            }
+        }
+      }
+      .login-box {
+          margin-right : 2rem;
+          @media screen and (max-width : 768px) {
+            display: none;
+        }
+        .login-wrapper {
+            background-color: rgb(255, 0, 0);
+            border-radius: 50px;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+                transition: all 0.2s ease-in-out;
+                box-shadow: inset 0.1rem 0.1rem 0 red, 0.1rem 0.1rem 1.5rem red;
+                transform: scale(1.1);
+            }
+            .login-link {
+                text-decoration: none;
+                .login { 
+                    font-size: $text;
+                    font-family: 'Blaka', cursive;
+                    color: rgb(0, 0, 0);
+                    padding: 0.5rem 1rem 0.5rem 1rem;
+                    transition: all 0.2s ease-in-out;
+                    user-select: none;
+
+                    &:hover {
+                        transition: all 0.2s ease-in-out;
+                        // text-shadow:  0 0 0.5rem rgb(0, 0, 0);
+                        // @include navtextanimation();
+                    }
+                }
+            }
+        }
+      }
+    }
+}
+.menu1 {
+    transition: all $trans ease-in-out;
+    @include boxhover();
+}
+.menu2 {
+    transition: all $trans ease-in-out;
+    @include boxhover();
+}
+.menu3 {
+    transition: all $trans ease-in-out;
+    @include boxhover();
+}
+.menu4 {
+    transition: all $trans ease-in-out;
+    @include boxhover();
+}
+
+.login-A{
+    margin-right : 2rem;
+    @media screen and (max-width : 768px) {
+      display: none;
+    }
+    font-size: 1.7rem
+}

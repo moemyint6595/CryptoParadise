@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+.currency-grid-container{
+    background-color: transparent;
+
+    .currency-grid-item {
+
+         .currency-wrapper{
+
+             padding: 1.3rem;
+             padding-bottom: 1.5rem;
+
+               .currency-box{
+                padding: 0.5rem;
+                border-radius: 2px;
+                // background-color: rgb(241, 237, 237);
+                transition: all 0.1s ease-in-out;
+                // background-image: linear-gradient(to right, silver, rgba(255, 255, 255, 0.664), silver);
+                background-color: rgb(29, 22, 48);
+
+                &:hover{
+                    box-shadow: 0 0 0.5rem rgb(156, 156, 156);
+                    transition: all 0.1s ease-in-out;
+                }
+
+                .title-box{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: transparent;
+                    padding: 0.3rem;
+                    border-bottom: 0.2px solid black;
+
+                    .title{
+                        font-size: 1.1rem;
+                        color: white;
+                    }
+
+                    .image{
+
+                        width: 2rem;
+                        height: auto;
+                    }
+                }
+
+                .body-box{
+                    padding-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+                    color: white;
+                    font-size: 0.9rem;
+                    
+                }
+                .footer-box{
+                    padding-top: 1rem;
+                    padding-bottom: 0.7rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.7rem;
+
+                    .details{
+                        height: 2rem;
+                        font-size: 0.7rem;
+                        border-radius: 50px;
+
+                        &:hover {
+                            background-color: gray;
+                        }
+                    }
+                    .infos{
+                        height: 2rem;
+                        font-size: 0.7rem;
+                        border-radius: 50px;
+                        &:hover {
+                            background-color: rgb(116, 114, 114);
+                        }
+
+                        a{
+                            text-decoration: none;
+                            color: rgb(255, 255, 255);
+                            
+                        }
+                    }
+                }
+             }
+        }
+    }
+}
+
+.crypto-search-box {
+    margin-left: auto;
+    margin-top: 1.3rem;
+    margin-right: auto;
+    margin-bottom: 1.3rem;
+    background-color: rgb(255, 255, 255);
+
+    .crypto-search{
+        width: 22rem;
+        height: auto;
+        outline: none;
+    }
+}

@@ -1,0 +1,153 @@
+@import '../fonts';
+
+.home-container{
+
+    background-image: radial-gradient( rgb(0, 24, 41), rgb(0, 0, 0));
+    width: 100%;
+
+    .home-wrapper{
+
+         width: 100%;
+        padding: 2rem;
+
+         .heading{
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            font-family: 'Anton', sans-serif;
+            text-shadow: 0 0 0.5rem rgb(158, 158, 158);
+         }
+         .grid-container{
+
+            .grid-item{
+                 display: flex;
+                 flex-direction: column;
+                 gap: 0.3rem;
+                 margin-bottom: 1rem;
+
+                .grid-item-title{
+                    color : orange;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem   ;
+
+                    .org{
+                        color :rgb(245, 83, 83);  
+                    }
+                    .twofourh{
+                        color : rgb(0, 183, 255);
+                        font-family: 'oleo', sans-serif;
+                        font-size: 1.2rem;
+                        
+                    }
+                    .currency-icon{
+                        color: rgb(14, 14, 14);
+                        background-color: gold;
+                        border-radius: 50%;
+                        font-size: 1.4rem;
+                        box-shadow: 0 0 0.5rem gold;
+                    }
+                    .cap-icon{
+                        background-color: rgb(0, 183, 255);
+                        color: black;
+                        border-radius: 2px;
+                        font-size: 1.4rem;
+                        box-shadow: 0 0 0.4rem rgb(0, 183, 255);
+                    }
+                    .market-icon{
+                        background-color: rgb(255, 94, 0);
+                        color: black;
+                        border-radius: 2px;
+                        font-size: 1.3rem;
+                        box-shadow: 0 0 0.4rem rgb(255, 94, 0);
+                    }
+                    .exchange-icon{
+                        background-color: rgb(255, 136, 0);
+                        color: black;
+                        border-radius: 50%;
+                        font-size: 1.4rem;
+                        box-shadow: 0 0 0.4rem rgb(255, 166, 0);
+                    }
+                    .tf-icon{
+                        background-color: rgb(255, 0, 64);
+                        color: black;
+                        border-radius: 2px;
+                        font-size: 1.4rem;
+                        box-shadow: 0 0 0.4rem rgb(255, 0, 64);
+                    }
+                    
+                }
+                span{
+                    color: rgb(0, 0, 0);
+                    font-size: 1.3rem;
+                    color: rgb(255, 255, 255);
+                }
+            }
+         }
+    }
+}
+
+.top-ten-container{
+      margin-left: 0.2rem;
+    .top-ten-wrapper{
+        display: flex;
+       align-items: center;
+      justify-content: space-between;
+      margin-left: 2rem;
+      margin-top: 1rem;
+
+
+      .top-ten-title{
+        font-family: 'Anton', sans-serif;
+        color: white;
+        span{
+            color: orange;
+        }
+      }
+      .showmore-box{
+        //   position: relative;
+        //   right: 1rem;
+        // background-color: red;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        padding-right: 1.2rem;
+
+          @media screen and (max-width : 768px) {
+                transform: scale(0.9);
+             }
+        @media screen and (max-width : 576px) {
+             transform: scale(0.8);
+              } 
+
+        .top-ten-showmore{
+            text-decoration: none;
+            font-size: 1.3rem;
+            color: rgba(0, 0, 255, 0.774);
+            transition: all 0.17s ease-in-out;
+            &:hover{
+                color: rgb(255, 255, 255);
+                transition: all 0.17s ease-in-out;
+             }
+          }
+        .showmore-icon{
+            display: none;
+            // position: absolute;
+            // top : 3px;
+            // right: -20px;
+            // position: relative;
+            // top: 5px;
+        }
+      }
+    }
+}
+.currency-box{
+    
+    padding-left: 1rem;
+}
+
+.marginadjust{
+    margin-top: -1rem;
+}
