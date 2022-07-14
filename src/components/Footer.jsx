@@ -25,7 +25,7 @@ const Footer = () => {
     <>
      <MUI.Box className='footer-container'>
          <MUI.Grid container gap={2} className='footer-wrapper'>
-             <MUI.Grid className='grid-item' item xs={12} sm={12} md={3}>
+             <MUI.Grid className='grid-item' item xs={12} sm={5} md={3}>
                <MUI.Typography className='header' variant='h5'>WEBSITE MENU</MUI.Typography>
                {
                 Menu.map((menu, i) => {
@@ -37,7 +37,7 @@ const Footer = () => {
                 })
                }
              </MUI.Grid>
-             <MUI.Grid className='grid-item' item xs={12} sm={12} md={3}>
+             <MUI.Grid className='grid-item' item xs={12} sm={6} md={3}>
                <MUI.Typography className='header' variant='h5'>TERMS</MUI.Typography>
                {
                 Terms.map((menu, i) => {
@@ -49,17 +49,20 @@ const Footer = () => {
                 })
                }
              </MUI.Grid>
-             <MUI.Grid className='grid-item' item xs={12} sm={12} md={3}>
+             <MUI.Grid className='grid-item' item xs={12} sm={12} md={4}>
                <MUI.Box className='social-box'>
                  <MUI.Box className='socials'>
                   <MICON.Facebook className='fb'/>
                   <MICON.Reddit className='re'/>
-                  <MICON.Twitter className='tw'/>
+                  <MICON.Twitter className='tw'/> 
                   <MICON.WhatsApp className='wh'/>
                   <MICON.LinkedIn className='li'/>
                  </MUI.Box>
                  <MUI.Box className='social-search-box'>
-                  TEST
+                  <MUI.Box className='social-search-wrapper'>
+                    <MUI.TextField className='social-search' variant='outlined' placeholder='Email' size='small'/>
+                    <MUI.Button className='social-search-button' variant='contained' size='small'>Subscribe</MUI.Button>
+                  </MUI.Box>
                  </MUI.Box>
                </MUI.Box>
              </MUI.Grid>
