@@ -76,8 +76,8 @@
                             .sm-btn{
                                 border: none;
                                 // outline: none;
-                                background-color: rgb(187, 183, 183);   
-                                border-radius: 10px;
+                                background-color: rgb(255, 38, 0);   
+                                border-radius: 5px;
                                 cursor: pointer;
                                 position: absolute;
                                 display: flex;
@@ -116,6 +116,8 @@
                                 }
                                 .moment{
                                     font-size: 0.6rem;
+                                    overflow: hidden;
+                                    object-fit: cover;
                                 }
                             }
                         }

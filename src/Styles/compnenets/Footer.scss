@@ -1,20 +1,114 @@
+$fs : 2.3rem;
+$hv : 0.8rem;
+$br : 50%;
+
+
 .footer-container {
-    height: 100px;
+    height: auto;
     width: 100%;
-    background-color: rgb(121, 115, 115);
-    color: white;
+    background-color: rgb(31, 30, 30);
+    padding-left: 1.2rem;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
     
     .footer-wrapper {
 
         height: 100%;
+        padding: 1rem;
+        
 
         .grid-item {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 0.1rem;
+            z-index: 99;
 
-            .project {
-                cursor: pointer;
+            .header{
+                font-size: 0.75rem;
+                font-weight: bold;
+                color: rgb(3, 152, 197);
+            }
+            .link{
+                text-decoration: none;
+                color: rgb(218, 216, 216);
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    transition: all 0.2s ease-in-out;
+                    color: rgb(170, 5, 5);
+                }
+                .body{
+                    font-size: 0.85rem;
+                }
+            }
+            .social-box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+
+                .socials{
+
+                    display: flex;
+                    align-items: center;
+                   justify-content: center;
+                   gap: 0.5rem;
+                   width: 100%;
+
+                    .fb{
+                        font-size: $fs;
+                        color :#4267B2;
+                        border-radius: $br;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transition: all 0.15 ease-in-out;
+                            box-shadow: 0 0 $hv #4267B2; ;
+                        }
+                    }
+                    .tw{
+                        font-size: $fs;
+                        color :#00acee;
+                        border-radius: $br;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transition: all 0.15 ease-in-out;
+                            box-shadow: 0 0 $hv #00acee;
+                        }
+                    }
+                    .re{
+                        font-size: $fs;
+                        color :#ff4500;
+                        border-radius: $br;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transition: all 0.15 ease-in-out;
+                            box-shadow: 0 0 $hv #ff4500 ;
+                        }
+                    }
+                    .wh{
+                        font-size: $fs;
+                        color : #00ff55;
+                        border-radius: $br;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transition: all 0.15 ease-in-out;
+                            box-shadow: 0 0 $hv #00ff55 ;
+                        }
+                    }
+                    .li{
+                        font-size: $fs;
+                        color :  #da3006;
+                        border-radius: $br;
+                        transition: all 0.15s ease-in-out;
+                        &:hover{
+                            transition: all 0.15 ease-in-out;
+                            box-shadow: 0 0 $hv #da3006 ;
+                        }
+                    }
+                }
             }
         }
     }
