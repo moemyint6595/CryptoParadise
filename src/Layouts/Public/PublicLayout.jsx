@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Layout.scss'
+// import * as MUI from '@mui/material'
+import Openmenu from '../../components/Openmenu'
 
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -12,7 +14,11 @@ export class PublicLayout extends Component {
     return (
       
       <React.Fragment>
-        <Container>
+
+        <Container className='container'>
+
+         <Openmenu/>
+         
          <Navbar smplified={this.props.smplified}/>
          <Box className='layout-container'>
             {this.props.children}
@@ -20,6 +26,7 @@ export class PublicLayout extends Component {
                <Footer/>
              </Box>
           </Box>
+
         </Container>
       </React.Fragment>
     )

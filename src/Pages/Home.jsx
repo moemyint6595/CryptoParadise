@@ -5,6 +5,7 @@ import * as MUI from '@mui/material'
 import * as MICON from '@mui/icons-material'
 import { MdArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom'
+// import Openmenu from '../components/Openmenu'
 
 import millify from 'millify';
 
@@ -19,6 +20,10 @@ function Home() {
   const globalStats = data?.data?.stats;
   
   return (
+    <>
+    {/* <MUI.Box className='openmenu'>
+       <Openmenu />
+    </MUI.Box> */}
     <PublicLayout>
        <>
         <MUI.Box className='home-container'>
@@ -85,6 +90,7 @@ function Home() {
         </MUI.Box>
        </>
     </PublicLayout>
+    </>
   )
 }
 

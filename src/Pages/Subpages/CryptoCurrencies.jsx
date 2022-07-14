@@ -44,13 +44,13 @@ const CryptoCurrencies = ({simplified}) => {
                 <MUI.Box className='currency-wrapper' component='div'>
                    <MUI.Box className='currency-box'>
                      <MUI.Box className='title-box'>
-                       <MUI.Box className='title'>{`${currency.rank}. ${currency.name}`}</MUI.Box>
+                       <MUI.Typography className='title'>{`${currency.rank}. ${currency.name}`}</MUI.Typography>
                        <MUI.Box><img className='image' src={currency.iconUrl} alt='currency_image'/></MUI.Box>
                      </MUI.Box>
                      <MUI.Box className='body-box'>
-                       <p>Price : {millify(currency.price)}</p>
-                       <p>Market Cap : {millify(currency.marketCap)}</p>
-                       <p>Daily Change : {millify(currency.change)}%</p>
+                      <MUI.Typography component='p'>Price : {millify(currency.price)}</MUI.Typography>
+                       <MUI.Typography component='p'>Market Cap : {millify(currency.marketCap)}</MUI.Typography>
+                       <MUI.Typography component='p'>Daily Change : {millify(currency.change)}%</MUI.Typography>
                      </MUI.Box>
                      <MUI.Box className='footer-box'>
                        <MUI.Button variant='contained' size='small' className='details' sx={{backgroundColor : currency.color }} 

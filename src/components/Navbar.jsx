@@ -4,15 +4,23 @@ import { FaBars } from 'react-icons/fa'
 
 import * as MUI from '@mui/material'
 import * as MICON from '@mui/icons-material'
+// import Openmenu from './Openmenu';
 
-import {  NavLink, Link, useNavigate } from 'react-router-dom'
+import {  NavLink, Link, useNavigate, } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { toggleopen } from '../Redux/Openmenuslice'
 
 function Navbar({smplified}) {
+
+const dispatch = useDispatch()
 
 const navigate = useNavigate()
 
   return (
     <>
+    {/* <MUI.Box className='openmenu'>
+       <Openmenu />
+    </MUI.Box> */}
     <MUI.Box className='top'>
      <MUI.Box className='top-container'>
          <MUI.Box className='contact-box'>
@@ -39,7 +47,7 @@ const navigate = useNavigate()
      </MUI.Box>
 
      <MUI.Box className='navbar-container' component='nav'>
-         <MUI.Box className='open-menu'>
+         <MUI.Box className='open-menu' component='div' onClick={() => dispatch(toggleopen())}>
              <FaBars/>
          </MUI.Box>
        <MUI.Box className='navbar-wrapper'>

@@ -1,0 +1,103 @@
+@import '../variables';
+
+
+.openmenu-container { 
+    position: fixed;
+    z-index: 999;
+    background-color: #0d0d0d;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    top : 0;
+    left :0;
+    transition: 0.3s ease-in-out;
+
+    .icon-container {
+        position: absolute;
+        top : 1.2rem;
+        right : 1.5rem;
+        background: transparent;
+        font-size: 2rem;
+        cursor: pointer;
+        
+        .icon {
+           color : #fff;
+           transition: all 0.2s ease-in-out;
+           &:hover{
+               transition: all 0.2s ease-in-out;
+               color: $primary;
+           }
+        }
+    }
+
+    .sidebar-wrapper {
+       color : #fff;
+
+       .sidebar-menu {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 80px);
+        text-align: center;
+
+
+        @media  screen and (max-width : 768px) {
+            // display: grid;
+            grid-template-rows: repeat(6, 70px);
+        }
+
+        .sidebar-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            list-style: none;
+            font-size: 1.5rem;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+            color: white;
+
+            p {
+                user-select: none;
+                &:hover {
+                    color: $primary;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+       }
+       .sidebar-signin-wrap {
+           display: flex;
+           justify-content: center;
+           .sidebar-signin-btn {
+               font-size: 1.3rem;
+               background-color:  $primary;
+               padding: 16px 60px;
+               border-radius: 50px;
+               transition: all 0.2s ease-in-out;
+               outline: none;
+               border: none;
+               color: #010606;
+               cursor: pointer;
+               user-select: none;
+               text-decoration: none;
+
+               &:hover {
+                   color: #010606;
+                   transition: 0.2s ease-in-out;
+                   background-color: #fff;
+                   transition: all 0.2s ease-in-out;
+               }
+           }
+       }
+    }
+    
+}
+.openmenu-open { 
+    top : 0;
+    opacity: 1;
+}
+.openmenu-close {
+    top : -100%;
+    opacity: 0;
+}

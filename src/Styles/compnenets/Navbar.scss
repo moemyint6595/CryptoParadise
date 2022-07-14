@@ -2,6 +2,13 @@
 @import '../mixing';
 @import '../variables';
 
+// .openmenu{
+//     width: 100%;
+//     position: absolute;
+//     z-index: 20;
+   
+// }
+
 .top {
     background-color: rgb(37, 37, 37);
     width: 100%;
@@ -15,6 +22,7 @@
         display: none;
         
     }
+    
 
     .top-container {
         height: 30px;
@@ -115,9 +123,12 @@
              cursor: pointer;
              color: white;
              transition: all 0.2s ease-in-out;
+             z-index: 90;
 
              &:hover {
                  transition: all 0.2s ease-in-out;
+                 color: red;
+                 
              }
         } 
     }
@@ -154,6 +165,7 @@
         @media screen and (max-width : 768px) {
             display: none;
         }
+        
         .menu-item{
             text-decoration: none;
             color: white;
