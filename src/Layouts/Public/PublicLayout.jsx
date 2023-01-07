@@ -15,19 +15,22 @@ export class PublicLayout extends Component {
       
       <React.Fragment>
 
-        <Container className='container'>
-
          <Openmenu/>
          
          <Navbar smplified={this.props.smplified}/>
+
+        <Container className='container'>
+
+      
          <Box className='layout-container'>
             {this.props.children}
-            <Box className='footer-box'>
-               <Footer/>
-             </Box>
+            
           </Box>
 
         </Container>
+        <Box className='footer-box'>
+               <Footer/>
+             </Box>
       </React.Fragment>
     )
   }

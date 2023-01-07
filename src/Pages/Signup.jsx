@@ -24,7 +24,7 @@ const Login = () => {
     <div>
        <PublicLayout>
          <MUI.Stack className='login-container' spacing={2} display='flex' justifyContent='center' alignItems='center'>
-           <MUI.Box className='login-wrapper'>
+           <MUI.Box className='login-wrapper' style={{ height : '500px'}}>
             <MUI.Box className='login-title-box'>
                <MUI.Typography variant='body2' className='login-title'>
                  CryptoParadise
@@ -88,7 +88,7 @@ const Login = () => {
                  </MUI.Box>
                  <MUI.Box className='login-footer-container'>
                   <MUI.Box className='footer-forget-box'>
-                     <Link to='/forgetpassword' className='forgotpassword'>
+                     <Link to='/forgotpassword' className='forgotpassword'>
                        Forgot password?
                      </Link>
                   </MUI.Box>

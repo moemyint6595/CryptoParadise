@@ -10,12 +10,15 @@ import Login from './Pages/Login';
 import ErrorPage from './Pages/ErrorPage';
 import Cryptodetails from './Pages/Subpages/Cryptodetails';
 import Signup from './Pages/Signup';
+import Forgotpassword from './Pages/Forgotpassword';
+import Forgotsuccess from './Pages/Forgotsuccess';
 
 
 function App() {
 
   return (
-    <>
+    <> 
+      
        <Routes>
          <Route path='/' element={<Home/>} />
          <Route path='crypto' element={<Crypto/>}/>
@@ -25,6 +28,8 @@ function App() {
          <Route path='crypto/:coinId' element={<Cryptodetails/>}/>
          <Route path='/signup' element={<Signup/>}/>
          <Route path='*' element={<ErrorPage/>} />
+         <Route path='/forgotpassword' element={<Forgotpassword />}/>
+         <Route path='/success' element ={<Forgotsuccess/>} />
        </Routes>
       
     </>

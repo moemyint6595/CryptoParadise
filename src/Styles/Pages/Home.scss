@@ -8,20 +8,21 @@
 
 .home-container{
 
-    background-image: radial-gradient( rgb(0, 24, 41), rgb(0, 0, 0));
+    // background-image: radial-gradient( rgb(0, 24, 41), rgb(0, 0, 0));
     width: 100%;
 
     .home-wrapper{
 
          width: 100%;
-        padding: 2rem;
+        // padding: 2rem;
+        margin-top : 1rem;
 
          .heading{
             font-size: 1.5rem;
             color: white;
             margin-bottom: 1rem;
             font-family: 'Anton', sans-serif;
-            text-shadow: 0 0 0.5rem rgb(158, 158, 158);
+            // text-shadow: 0 0 0.5rem rgb(158, 158, 158);
          }
          .grid-container{
 
@@ -40,7 +41,7 @@
                     gap: 0.4rem   ;
 
                     .org{
-                        color :rgb(245, 83, 83);  
+                        color :rgb(255, 255, 255);  
                     }
                     .twofourh{
                         color : rgb(0, 183, 255);
@@ -53,35 +54,35 @@
                         background-color: gold;
                         border-radius: 50%;
                         font-size: 1.4rem;
-                        box-shadow: 0 0 0.5rem gold;
+                        // box-shadow: 0 0 0.5rem gold;
                     }
                     .cap-icon{
                         background-color: rgb(0, 183, 255);
                         color: black;
                         border-radius: 2px;
                         font-size: 1.4rem;
-                        box-shadow: 0 0 0.4rem rgb(0, 183, 255);
+                        // box-shadow: 0 0 0.4rem rgb(0, 183, 255);
                     }
                     .market-icon{
                         background-color: rgb(255, 94, 0);
                         color: black;
                         border-radius: 2px;
                         font-size: 1.3rem;
-                        box-shadow: 0 0 0.4rem rgb(255, 94, 0);
+                        // box-shadow: 0 0 0.4rem rgb(255, 94, 0);
                     }
                     .exchange-icon{
                         background-color: rgb(255, 136, 0);
                         color: black;
                         border-radius: 50%;
                         font-size: 1.4rem;
-                        box-shadow: 0 0 0.4rem rgb(255, 166, 0);
+                        // box-shadow: 0 0 0.4rem rgb(255, 166, 0);
                     }
                     .tf-icon{
                         background-color: rgb(255, 0, 64);
                         color: black;
                         border-radius: 2px;
                         font-size: 1.4rem;
-                        box-shadow: 0 0 0.4rem rgb(255, 0, 64);
+                        // box-shadow: 0 0 0.4rem rgb(255, 0, 64);
                     }
                     
                 }
@@ -96,12 +97,12 @@
 }
 
 .top-ten-container{
-      margin-left: 0.2rem;
+    //   margin-left: 0.2rem;
     .top-ten-wrapper{
         display: flex;
        align-items: center;
       justify-content: space-between;
-      margin-left: 2rem;
+    //   margin-left: 2rem;
       margin-top: 1rem;
 
 
@@ -150,8 +151,11 @@
     }
 }
 .currency-box{
-    
-    padding-left: 1rem;
+    position: relative;
+    right: 10px;
+    // margin-right : rem;
+    // padding-right: 1rem;
+    background-color : rgba(0, 0, 0, 0.356)
 }
 
 .marginadjust{

@@ -13,7 +13,7 @@
              padding-bottom: 1.5rem;
 
                .currency-box{
-                padding: 0.5rem;
+                padding: 0.3rem;
                 border-radius: 2px;
                 // background-color: rgb(241, 237, 237);
                 transition: all 0.1s ease-in-out;
@@ -25,6 +25,8 @@
                     transition: all 0.1s ease-in-out;
                 }
 
+
+                
                 .title-box{
                     display: flex;
                     justify-content: space-between;
@@ -44,6 +46,7 @@
                         height: auto;
                     }
                 }
+
 
                 .body-box{
                     padding-top: 1rem;

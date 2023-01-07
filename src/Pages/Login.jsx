@@ -19,7 +19,7 @@ const Login = ({smplified}) => {
        <PublicLayout smplified={!smplified}>
 
          <MUI.Stack className='login-container' spacing={2} display='flex' justifyContent='center' alignItems='center'>
-           <MUI.Box className='login-wrapper'>
+           <MUI.Box className='login-wrapper' style={{ height : '420px'}}>
             <MUI.Box className='login-title-box'>
                <MUI.Typography variant='body2' className='login-title'>
                  CryptoParadise
@@ -83,12 +83,12 @@ const Login = ({smplified}) => {
                  </MUI.Box> */}
                  <MUI.Box className='login-footer-container'>
                   <MUI.Box className='footer-forget-box'>
-                     <Link to='/forgetpassword' className='forgotpassword'>
+                     <Link to='/forgotpassword' className='forgotpassword'>
                        Forgot password?
                      </Link>
                   </MUI.Box>
                   <MUI.Box className='footer-login-box'>
-                    <MUI.Button variant='contained' className='footer-login'>
+                    <MUI.Button color='primary' variant='contained' className='footer-login'>
                       Sign In
                     </MUI.Button>
                   </MUI.Box>

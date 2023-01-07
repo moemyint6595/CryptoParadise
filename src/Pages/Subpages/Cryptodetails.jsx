@@ -23,6 +23,7 @@ import LineChart from '../../components/LineChart'
 // import ApexChart from '../../components/ApexChart'
 
 const Cryptodetails = () => {
+
   const { coinId} = useParams();
 
   const [timePeriod, setTimePeriod] = useState('3h')
@@ -92,7 +93,6 @@ const Cryptodetails = () => {
              <MUI.Grid item className='chart-container' xs={12}>
                <MUI.Box className='chart-box' >
                  <LineChart coinHistory={coinHistory}/>
-                 {/* <ApexChart /> */}
                </MUI.Box>
              </MUI.Grid>
            </MUI.Grid>
@@ -117,7 +117,7 @@ const Cryptodetails = () => {
                        <MUI.Box><DollarCircleOutlined/></MUI.Box>
                        <MUI.Typography variant='body2'>Price to USD</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>$ {millify(cryptoDetails.price)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>$ { cryptoDetails.price ? millify(cryptoDetails.price) : 0 }</MUI.Typography>
                    </MUI.Box>
 
                    <MUI.Box className='stat-item-box'>
@@ -125,7 +125,7 @@ const Cryptodetails = () => {
                        <MUI.Box><TrophyOutlined/></MUI.Box>
                        <MUI.Typography variant='body2'>All-time-high</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>$ {millify(cryptoDetails.allTimeHigh.price)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>$ { cryptoDetails.allTimeHigh.price ? millify(cryptoDetails.allTimeHigh.price) : 0}</MUI.Typography>
                    </MUI.Box>
 
                    <MUI.Box className='stat-item-box'>
@@ -133,7 +133,7 @@ const Cryptodetails = () => {
                        <MUI.Box><DollarCircleOutlined/></MUI.Box>
                        <MUI.Typography variant='body2'>Market Cap</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>{millify(cryptoDetails.marketCap)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>{ cryptoDetails.marketCap ? millify(cryptoDetails.marketCap) : 0 }</MUI.Typography>
                    </MUI.Box>
 
                    <MUI.Box className='stat-item-box'>
@@ -141,7 +141,7 @@ const Cryptodetails = () => {
                        <MUI.Box><MICON.AssessmentOutlined sx={{fontSize : '1.1rem', opacity: '0.8'}}/></MUI.Box>
                        <MUI.Typography variant='body2'>Change</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>% {millify(cryptoDetails.change)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>% {cryptoDetails.change ? millify(cryptoDetails.change) : 0 }</MUI.Typography>
                    </MUI.Box>
 
                  </MUI.Box>
@@ -185,7 +185,7 @@ const Cryptodetails = () => {
                        <MUI.Box><ExclamationCircleOutlined/></MUI.Box>
                        <MUI.Typography variant='body2'>Total Supply</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>{millify(cryptoDetails.supply.total)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>{cryptoDetails.supply.total ? millify(cryptoDetails.supply.total) : 0}</MUI.Typography>
                    </MUI.Box>
 
                    <MUI.Box className='stat-item-box'>
@@ -193,7 +193,7 @@ const Cryptodetails = () => {
                        <MUI.Box><ExclamationCircleOutlined/></MUI.Box>
                        <MUI.Typography variant='body2'>Circulating Supply</MUI.Typography>
                      </MUI.Box>
-                     <MUI.Typography variant='body2' className='stat-item-price'>{millify(cryptoDetails.supply.circulating)}</MUI.Typography>
+                     <MUI.Typography variant='body2' className='stat-item-price'>{cryptoDetails.supply.circulating ? millify(cryptoDetails.supply.circulating) : 0}</MUI.Typography>
                    </MUI.Box>
                    
                   </MUI.Box>

@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Styles/compnenets/Navbar.scss'
 import { FaBars } from 'react-icons/fa'
+import logo from '../Images/Binance_Logo.png'
 
 import * as MUI from '@mui/material'
 import * as MICON from '@mui/icons-material'
@@ -30,18 +31,18 @@ const navigate = useNavigate()
              </MUI.Box>
              <MUI.Box className='phone-box'>
                  <MICON.Phone />
-                 <MUI.Typography variant='body2' className='phonenumber'>+959 69696969</MUI.Typography>
+                 <MUI.Typography variant='body2' className='phonenumber'>+959 456109875</MUI.Typography>
              </MUI.Box>
          </MUI.Box>
          <MUI.Box className='search-box'>
              <MUI.Typography variant='body2' className='search-text'>Trade Everywhere</MUI.Typography>
-             <MUI.Box className='s-box'>
+             {/* <MUI.Box className='s-box'>
                  <MICON.Search className='icon'/>
                <input type='text' 
                 placeholder='Search...'
                 className='search'
              />
-             </MUI.Box>
+             </MUI.Box> */}
          </MUI.Box>
     </MUI.Box>
      </MUI.Box>
@@ -51,11 +52,14 @@ const navigate = useNavigate()
              <FaBars/>
          </MUI.Box>
        <MUI.Box className='navbar-wrapper'>
-           <Link to='/' className='title-link' >
-               <MUI.Typography variant='h5' className='title'>
-                   CryptoParadise
-               </MUI.Typography>
-           </Link>
+           <MUI.Box style={{ display : 'flex', justifyContent : 'center', alginItem : 'center', marginLeft : '10px'}}>
+                <img src={ logo  } alt='logo'style={ { height : '2.8rem', width : 'auto'}}/>
+                <Link to='/' className='title-link' >
+                    <MUI.Typography variant='h5' className='title'>
+                        CryptoParadise
+                    </MUI.Typography>
+                </Link>
+            </MUI.Box>
            <MUI.Box className='menu-container'>
                <MUI.Box className='menu1'>
                    <NavLink to='/' className='menu-item'>

@@ -5,7 +5,7 @@ function ErrorPage() {
   return (
     <PublicLayout>
       <div style={{ width : '100%', display : 'flex', justifyContent : 'center', alignItems : 'center'}}>
-        <h1 style={{ marginTop : '1rem'}}>
+        <h1 style={{ marginTop : '1rem', color : 'white'}}>
            404 Page Not Found!
           </h1>
       </div>

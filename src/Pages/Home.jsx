@@ -5,10 +5,7 @@ import * as MUI from '@mui/material'
 import * as MICON from '@mui/icons-material'
 import { MdArrowRight } from 'react-icons/md'
 import { Link } from 'react-router-dom'
-// import Openmenu from '../components/Openmenu'
-
 import millify from 'millify';
-
 import { useGetCryptosQuery } from '../Services/CryptoApi';
 import CryptoCurrencies from './Subpages/CryptoCurrencies';
 import CryptoNews from './Subpages/CryptoNews';
@@ -21,43 +18,40 @@ function Home() {
   
   return (
     <>
-    {/* <MUI.Box className='openmenu'>
-       <Openmenu />
-    </MUI.Box> */}
     <PublicLayout>
        <>
         <MUI.Box className='home-container'>
           <MUI.Box className='home-wrapper'>
-             <MUI.Typography variant='h5' className='heading'>
+             <MUI.Typography component={'p'} variant='h5' className='heading'>
                 Global Crypto Stats
              </MUI.Typography>
              <MUI.Grid container className='grid-container'>
                <MUI.Grid item className='grid-item' xs={12} sm={12} md={6} >
-                 <div className='grid-item-title'><span className='org'>Total</span> Cryptocurrencies<MICON.CurrencyBitcoin className='currency-icon'/> </div>
+                 <MUI.Typography component={'p'} className='grid-item-title'><span className='org'>Total</span> Cryptocurrencies<MICON.CurrencyBitcoin className='currency-icon'/> </MUI.Typography>
                  <span> {
                    isFetching ? 'Loading...' : millify(globalStats.total)
                   }</span>
                </MUI.Grid>
                <MUI.Grid item className='grid-item' xs={12} sm={12} md={6} >
-                 <div className='grid-item-title'><span className='org'>Total</span> Exchanges <MICON.CurrencyExchange className='exchange-icon'/></div>
+                 <MUI.Typography component={'p'} className='grid-item-title'><span className='org'>Total</span> Exchanges <MICON.CurrencyExchange className='exchange-icon'/></MUI.Typography>
                  <span> {
                    isFetching ? 'Loading...' : millify(globalStats.totalExchanges)
                   }</span>
                </MUI.Grid>
                <MUI.Grid item className='grid-item' xs={12} sm={12} md={6} >
-                 <div className='grid-item-title'><span className='org'>Total</span> Market Cap <MICON.Timeline className='cap-icon'/></div>
+                 <MUI.Typography component={'p'} className='grid-item-title'><span className='org'>Total</span> Market Cap <MICON.Timeline className='cap-icon'/></MUI.Typography>
                  <span> {
                    isFetching ? 'Loading...' : millify(globalStats.totalMarketCap)
                   }</span>
                </MUI.Grid>
                <MUI.Grid item className='grid-item' xs={12} sm={12} md={6} >
-                 <div className='grid-item-title'><span className='org'>Total</span> <span className='twofourh'>24h</span> Volume <MICON.LocalConvenienceStore className='tf-icon'/></div>
+                 <MUI.Typography component={'p'} className='grid-item-title'><span className='org'>Total</span> <span className='twofourh'>24h</span> Volume <MICON.LocalConvenienceStore className='tf-icon'/></MUI.Typography>
                  <span> {
                    isFetching ? 'Loading...' : millify(globalStats.total24hVolume)
                   }</span>
                </MUI.Grid>
                <MUI.Grid item className='grid-item' xs={12} sm={12} md={6} >
-                 <div className='grid-item-title'><span className='org'>Total</span> Markets <MICON.LocalGroceryStore className='market-icon' /></div>
+                 <MUI.Typography component={'p'} className='grid-item-title'><span className='org'>Total</span> Markets <MICON.LocalGroceryStore className='market-icon' /></MUI.Typography>
                  <span> {
                    isFetching ? 'Loading...' : millify(globalStats.totalMarkets)
                   }</span>

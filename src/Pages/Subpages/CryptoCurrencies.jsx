@@ -26,13 +26,13 @@ const CryptoCurrencies = ({simplified}) => {
 
   },[search, data])
 
-  if(isFetching) return 'Loading...';
+  if(isFetching) return 'Loading...'; 
 
   return (
     <>
        {!simplified && 
          <MUI.Box className='crypto-search-box'>
-          <MUI.TextField className='crypto-search' variant='filled' size='small' label='Search Cryptos...' type='text' onChange={(e) => setSearch(e.target.value)}/>
+          <MUI.TextField className='crypto-search' variant='filled' size='small' label='Search Cryptos...' type='text'  onChange={(e) => setSearch(e.target.value)}/>
        </MUI.Box>
        
        }
